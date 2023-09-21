@@ -1,0 +1,87 @@
+<!-- <form (ngSubmit)="onSubmit()" style="margin-bottom: 0;">
+	<h1>Login</h1>
+	
+	<label for="username">Username</label>
+
+			<div>
+				<input type="text" class="form-control" id="username" name="username" placeholder="Enter Your username"
+					[(ngModel)]="jobseeker.username" required #username="ngModel"
+					[class.is-invalid]="username.invalid && username.touched">
+				<div *ngIf="username.errors &&(username.invalid && username.touched)">
+					<small class="text-danger" *ngIf="username.errors['required']">Username is required field</small>
+					<small class="text-danger" *ngIf="username.errors['pattern']">Enter valid Username </small>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" placeholder="password"
+					[(ngModel)]="jobseeker.password" required #password="ngModel"
+					[class.is-invalid]="password.invalid && password.touched">
+				<small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required
+					field</small>
+			</div>
+			<div class="button">
+				<input type="submit" value="Login">
+			</div>
+			<a class="btn" routerLink="/signup">New User? SignUp here</a>
+
+</form> -->
+<div style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+	<form (ngSubmit)="onSubmit()" style="margin-bottom: 0;">
+		<h1>Login</h1>
+		
+		<label for="username">Username</label>
+	
+				<div>
+					<input type="text" class="form-control" id="username" name="username" placeholder="Enter Your username"
+						[(ngModel)]="jobseeker.username" required #username="ngModel"
+						[class.is-invalid]="username.invalid && username.touched">
+					<div *ngIf="username.errors &&(username.invalid && username.touched)">
+						<small class="text-danger" *ngIf="username.errors['required']">Username is required field</small>
+						<small class="text-danger" *ngIf="username.errors['pattern']">Enter valid Username </small>
+	
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="password"
+						[(ngModel)]="jobseeker.password" required #password="ngModel"
+						[class.is-invalid]="password.invalid && password.touched">
+					<small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required
+						field</small>
+				</div>
+				<div class="button">
+					<input type="submit" value="Login" style="background-color: rgba(29, 171, 34, 0.874);font-weight: bold;color: #f5f5f5;">
+				</div>
+				<a class="btn" routerLink="/signup">New User? SignUp here</a>
+	
+	</form>
+
+</div>
+
+<!-- <label for="username">Username</label>
+
+			<div>
+				<input type="text" class="form-control" id="username" name="username" placeholder="Enter Your username"
+					[(ngModel)]="jobseeker.username" required #username="ngModel"
+					[class.is-invalid]="username.invalid && username.touched">
+				<div *ngIf="username.errors &&(username.invalid && username.touched)">
+					<small class="text-danger" *ngIf="username.errors['required']">Username is required field</small>
+					<small class="text-danger" *ngIf="username.errors['pattern']">Enter valid Username </small>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" name="password" placeholder="password"
+					[(ngModel)]="jobseeker.password" required #password="ngModel"
+					[class.is-invalid]="password.invalid && password.touched">
+				<small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required
+					field</small>
+			</div>
+			<div class="button">
+				<input type="submit" value="Login">
+			</div> -->
+				
+				

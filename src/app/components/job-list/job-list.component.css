@@ -1,0 +1,117 @@
+.nav-pills .nav-item .active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.job-item {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.job-item:hover {
+    border-color: rgba(0, 0, 0, .08);
+    box-shadow: none;
+}
+.fa{
+    color: rgba(16, 172, 16, 0.863);
+}
+.far{
+    color: rgba(16, 172, 16, 0.863);
+
+}
+.btn{
+    background-color: rgba(16, 172, 16, 0.863);
+    color: aliceblue;
+    font-weight: bold;
+}
+.job-item{
+    background-color: bisque;
+}
+/* navbar */
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+    border: none;
+    content: "\f106";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: .5s;
+    transform: rotate(-180deg);
+    
+}
+
+
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 80px;
+    padding: 25px 0;
+    color: #000000;
+    font-size: 17px;
+    text-transform: uppercase;
+    outline:#000000
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: rgb(4, 182, 7);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+        
+        
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 2px solid #000000;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+    color: white;
+    font-size: 15px;
+    background-color: #00b351;
+    
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: 500;
+}
+
+.navbar-light .sticky-top {
+    top: -100px;
+    transition: .5s;
+
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        top: 100%;
+        margin-top: 0;
+        transform: rotateX(75deg);
+        transform-origin: 0% 0%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}

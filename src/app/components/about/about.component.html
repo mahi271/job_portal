@@ -1,0 +1,67 @@
+ 
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow  p-0">
+    <a routerLink="/home" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+        <h1 class="m-0 text-white">JobEntry</h1>
+    </a>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a routerLink="/home" class="nav-item nav-link active">Home</a>
+            <a class="nav-link" routerLink="/about">About <span class="sr-only">(current)</span></a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a routerLink="/job-list" class="dropdown-item">Job List</a>
+                    <a routerLink="/post-job" class="dropdown-item">Post Jobs</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a routerLink="/profile" class="nav-link">Profile</a>
+                
+            </div>
+            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+        </div>
+        <a routerLink="/post-job" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block fa fa-arrow-right ms-3">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+        
+        <a routerLink="/login" class="btn btn-danger rounded-0 py-4 px-lg-3 d-none d-lg-block" style="background-color: rgba(138, 36, 36, 0.92);">Logout</a>
+    </div>
+
+</nav> 
+<router-outlet></router-outlet>
+
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-0 about-bg rounded overflow-hidden">
+                    <div class="col-6 text-start">
+                        <img class="img-fluid w-100" src="../assets/images/about-1.jpg">
+                    </div>
+                    <div class="col-6 text-start">
+                        <img class="img-fluid" src="../assets/images/about-2.jpg" style="width: 85%; margin-top: 15%;">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-fluid" src="../assets/images/about-3.jpg" style="width: 85%;">
+                    </div>
+                    <div class="col-6 text-end">
+                        <img class="img-fluid w-100" src="../assets/images/about-4.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <h1 class="mb-4">We Help To Get The Best Job And Find A Talent</h1>
+                <p class="mb-4">Seeking qualified candidates for a wide-range of positions at all career levels. Access to a premiere network of academic institutions and corporations.</p>
+                <p><b class="fa fa-check  me-3"></b>1000+ trusted clients.</p>
+                <p><b class="fa fa-check  me-3"></b>User friendly web.</p>
+                <p><b class="fa fa-check  me-3"></b>One destination to get your dream job.</p>
+                <a class="btn btn-secondary py-3 px-5 mt-3" href="">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Our Trusted patners</h2>
+        <img class="img-fluid" src="../assets/images/job icons.jpg" style="width: 85%; margin-left: 10%;margin-top: 0;">
+    </div>
+</div>

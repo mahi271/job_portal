@@ -1,0 +1,79 @@
+ 
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow  p-0">
+    <a routerLink="/home" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+        <h1 class="m-0 text-white">JobEntry</h1>
+    </a>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a routerLink="/home" class="nav-item nav-link active">Home</a>
+            <a class="nav-link" routerLink="/about">About <span class="sr-only">(current)</span></a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                <div class="dropdown-menu rounded-0 m-0">
+                    <a routerLink="/job-list" class="dropdown-item">Job List</a>
+                    <a routerLink="/post-job" class="dropdown-item">Post Jobs</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a routerLink="/profile" class="nav-link">Profile</a>
+                
+            </div>
+            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
+        </div>
+        <a routerLink="/post-job" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block fa fa-arrow-right ms-3">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+        <a routerLink="/login" class="btn btn-danger rounded-0 py-4 px-lg-3 d-none d-lg-block" style="background-color: rgba(138, 36, 36, 0.92);">Logout</a>
+    </div>
+
+</nav> 
+<router-outlet></router-outlet>
+
+
+<div [hidden]="submitted" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+
+    <h2 style="text-align: center; margin-bottom: 20px;">Post a Job</h2>
+
+    <form (ngSubmit)="onsubmit()" style="margin-bottom: 0;">
+        <div class="form-group">
+            <label for="id">job ID:</label>
+            <input type="number" class="form-control" id="id" required [(ngModel)]="job.id" name="id">
+        </div>
+        <div class="form-group">
+            <label for="title">Job Title:</label>
+            <input type="text" class="form-control" id="title" required [(ngModel)]="job.title" name="title">
+        </div>
+        <div class="form-group">
+            <label for="location">location:</label>
+            <input type="text" class="form-control" id="location" required [(ngModel)]="job.location" name="location">
+        </div>
+        <div class="form-group">
+            <label for="salary"> Salary:</label>
+            <input type="number" class="form-control" id="salary" required [(ngModel)]="job.salary" name="salary">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" required [(ngModel)]="job.description" name="description">
+        </div>
+        <div class="form-group">
+            <label for="type">Job Type:</label>
+            <input type="text" class="form-control" id="type" required [(ngModel)]="job.type" name="type">
+        </div>
+
+
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="confirmation-container ">
+
+    <div [hidden]="!submitted">
+    
+        <h1>you submitted successfully !</h1>
+        <p>Your form submission has been received and processed.</p>
+        <div class="back-button" style="background-color: green;">
+            <a routerLink="/post-job">Back </a>
+        </div>
+    </div>
+
+</div>
